@@ -14,7 +14,7 @@ fi
 MP3=$1
 LRC=$2
 
-T='00:00:00'
+T='00:00.00'
 begin=`date +"%s"`
 
 function tag(){
@@ -24,7 +24,7 @@ function tag(){
 	h=$[ $sec/3600 ]
 	m=$[ $sec/60 ]
 	s=$[ $sec%60 ]
-	T=`printf "%02d:%02d:%02d" $h $m $s`
+	T=`printf "%02d:%02d.%02d" $h $m $s`
 }
 
 # print lrc
